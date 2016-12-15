@@ -1,0 +1,31 @@
+doctype html
+
+html(lang="es")
+  head
+    title Tecnoda | Inicio
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    link(rel="stylesheet" href="css/styles.css")
+  body
+    header.ed-container
+      .ed-item.s-80
+        include block-logo
+      .ed-item.s-20.cross-center.main-end
+        .nav-toggle#main-nav-toggle       
+    .nav-container
+      .ed-container
+        .ed-item
+          nav.main-nav#main-nav
+            include block-menu
+    block banner
+    block aboutUs
+    block features
+    block services
+    block gallery
+    //.pricing
+    //.testimonials
+    //.posts
+    //footer
+    script(src='js/ed-grid.js')
+    script(src='js/scripts.js')
