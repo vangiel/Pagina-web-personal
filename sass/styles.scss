@@ -107,3 +107,122 @@ body{
 		border: 1px solid $color2;
 	}
 }
+
+
+//Features
+
+.features-container{
+	position:relative;
+	background: url(../img/mascota.jpg) center / cover;
+	margin-bottom: 2em;
+	
+ 	&:before{
+		content: "";
+		position: absolute;
+		background: rgba($color2,0.85);
+		width: 100%;
+		height: 100%;
+	}
+} 
+
+.feature{
+	padding: 2em 0;
+	color: #fff;
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	
+	&__icon{
+		font-size: 3em;
+	}
+
+	&__numbers{
+		font-size: 1.8em;
+	}
+}
+
+//services
+
+.services-container{
+	@include grid('.service', 1 2 3, 2em)
+	margin-bottom: 2em;
+}
+
+.services-title,
+.services-subtitle{
+	text-align: center;
+}
+
+.service{
+	position: relative;
+
+	&-icon{
+		position: absolute;
+		font-size: 2.3em;
+		color: $color1;
+
+	}
+
+	&-title,
+	&-content{
+		padding-left: 3em;
+	}
+
+	&-title{
+		margin-top: 5px;
+		color: $color2;
+	}
+}
+
+//Gallery
+
+.gallery{
+	@include grid('.gallery-item', 2 4, 0px);
+}
+
+//Pricing
+
+.pricing-title{
+	text-align: center;
+}
+
+.pricing-table{
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0;
+	border: 1px solid $color1;
+	margin-bottom: 2em;
+
+	&__title{
+		background: $color2;
+		padding: 1em;
+		text-align: center;
+		color: rgba(#fff,.8);
+
+		span{
+			color: #fff;
+		}
+	}
+	&__price{
+		font-size: 4em;
+		text-align: center;
+
+		&:before{
+			content: "$";
+		}
+	}
+
+	&__feature{
+		text-align: center;
+		padding: .5em 1em;
+		border-bottom: 1px solid #ddd;
+		width: 90%;
+		margin: auto;
+	}
+
+	&__cta{
+		display: table;
+		@include button($color2, #fff);
+		margin: 1em auto;
+	}
+}

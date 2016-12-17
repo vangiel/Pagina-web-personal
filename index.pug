@@ -19,4 +19,67 @@ block aboutUs
         h2.about-us__title About Clinic
         p.about-us__subtitle Pets best friends
         p.about-us__content Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        a(href="#").about-us__cta Contact us
+        a(href="#").about-us__cta Contact us    
+block features
+  .features-container
+    .ed-container
+      .ed-item.s-50.l-25
+        .feature
+          .icon-heart.feature__icon
+          .feature__numbers 12964
+          .feature__subtitle Happy clients
+      .ed-item.s-50.l-25
+        .feature
+          .icon-home.feature__icon
+          .feature__numbers 3472
+          .feature__subtitle Happy clients
+      .ed-item.s-50.l-25
+        .feature
+          .icon-paw.feature__icon
+          .feature__numbers 15
+          .feature__subtitle Happy clients
+      .ed-item.s-50.l-25
+        .feature
+          .icon-dog.feature__icon
+          .feature__numbers 35
+          .feature__subtitle Happy clients
+block services
+  .ed-container
+    .ed-item
+      h2.services-title Our 
+        span Services & Procedures
+      p.services-subtitle Many clients satisfied
+      .services-container
+        -var i=6
+        -while(i--)
+          .service
+            .service-icon.icon-dog
+            h3.service-title Wellness Care
+            .service-content  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis obcaecati nesciunt animi beatae dolore.
+
+block gallery
+  .gallery
+    -var n=8
+    -while(n--)
+      .gallery-item
+        img(src="../img/dog window.jpg")
+
+block pricing
+  .pricing
+    h2.pricing-title Pricing tables
+
+  .ed-container.pricing-tables
+    -var n=3
+    -while(n--)
+      .ed-item.l-1-3
+        ul.pricing-table
+          li.pricing-table__title Preventive 
+            span Inspection
+          li.pricing-table__price 99.99
+          li.pricing-table__feature Feature 1
+          li.pricing-table__feature Feature 2
+          li.pricing-table__feature Feature 3
+          li.pricing-table__feature Feature 4
+          li.pricing-table__feature Feature 5
+          li: a(href="#").pricing-table__cta Solicitar
+
